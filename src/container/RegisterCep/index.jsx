@@ -27,19 +27,19 @@ export function RegisterCep() {
                     </InputCep>
 
                     <InputGroup>
-                        <Input type="number" placeholder="Logradouro" />
+                        <Input disabled type="number" placeholder="Logradouro" />
                     </InputGroup>
 
                     <InputGroup>
-                        <Input type="tel" placeholder="Número" />
+                        <Input disabled type="tel" placeholder="Número" />
                     </InputGroup>
 
                     <InputGroup>
-                        <Input type="email" placeholder="complemento" />
+                        <Input disabled type="email" placeholder="complemento" />
                     </InputGroup>
 
                     <InputGroup>
-                        <Input type="password" placeholder="UF" />
+                        <Input disabled type="password" placeholder="UF" />
                     </InputGroup>
 
                     <ContainerCheckBox>

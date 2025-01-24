@@ -7,8 +7,16 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     background-color: ${props => props.theme.secondBlack};
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+
+    @media (max-width: 395px) {
+        height: 118vh;
+    }
+
+    @media (max-width: 325px) {
+        height: 140vh;
+    }
 `
 
 export const Header = styled.header`
@@ -29,6 +37,10 @@ export const Content = styled.div`
 
     h3{
         font-size: 1.5rem;
+    }
+
+    @media (min-width: 1000px) {
+        width: 25%;
     }
 `
 

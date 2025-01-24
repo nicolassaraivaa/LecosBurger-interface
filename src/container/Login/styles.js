@@ -8,7 +8,19 @@ export const Container = styled.div`
     flex-direction: column;
     background-color: ${props => props.theme.secondBlack};
     height: 100vh;
-    width: 100%;
+    width: 100vw;
+
+    @media (min-width: 450px) {
+        gap: 8rem;
+    }
+
+    @media (max-width: 395px) {
+        height: 118vh;
+    }
+
+    @media (max-width: 325px) {
+        height: 140vh;
+    }
 `
 
 export const Header = styled.header`
@@ -18,6 +30,12 @@ export const Header = styled.header`
     justify-content: flex-start;
     img{
         width: 8rem;
+    }
+
+    @media (min-width: 450px) {
+        img{
+            width: 12rem;
+        }
     }
 `
 
@@ -30,6 +48,10 @@ export const Content = styled.div`
     h3{
         font-size: 1.5rem;
     }
+
+    @media (min-width: 1000px) {
+        width: 25%;
+    }
 `
 
 export const Form = styled.form`
@@ -38,10 +60,25 @@ export const Form = styled.form`
     gap: 1.6rem;
 `
 export const InputGroup = styled.div`
-
+    position: relative;
 `
+export const IconLock = styled.div`
+    position: absolute;
+    top: 55%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+`
+
+export const IconEmail = styled.div`
+    position: absolute;
+    top: 55%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+`
+
 export const Input = styled.input` 
     padding: 0.7rem;
+    padding-left: 2.1rem ;
     border-radius: 1rem;
     width: 100%;
     background-color: transparent;
