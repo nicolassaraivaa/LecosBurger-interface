@@ -7,16 +7,13 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     background-color: ${props => props.theme.secondBlack};
-    height: 100vh;
+    height: 110vh;
     width: 100vw;
 
-    @media (max-width: 395px) {
-        height: 118vh;
+    @media (max-width: 420px) {
+        height: 100%;
     }
 
-    @media (max-width: 325px) {
-        height: 140vh;
-    }
 `
 
 export const Header = styled.header`
