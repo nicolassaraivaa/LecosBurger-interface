@@ -58,9 +58,19 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+
+    p{
+        font-size: 0.7rem;
+        margin-top: -0.9rem;
+        color: ${props => props.theme.red};
+    }
 `
 export const InputGroup = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     position: relative;
+
 `
 export const IconLock = styled.div`
     position: absolute;

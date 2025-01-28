@@ -9,12 +9,12 @@ export const Container = styled.div`
     height: 100vh;
     width: 100vw;
 
-    @media (max-width: 395px) {
-        height: 118vh;
+    @media (max-width: 1300px) {
+        height: 100%
     }
 
-    @media (max-width: 325px) {
-        height: 140vh;
+    @media (min-height: 840px) {
+        height: 100vh;
     }
 
 `
@@ -50,6 +50,17 @@ export const Form = styled.form`
     gap: 1.6rem;
 `
 export const InputGroup = styled.div`
+    p{
+        margin-top: 0.36rem;
+        font-size: 0.7rem;
+        color: ${props => props.theme.red};
+    }
+`
+
+export const ErrorCep = styled.div`
+    margin-top: -1.125rem;
+    font-size: 0.7rem;
+    color: ${props => props.theme.red};
 
 `
 

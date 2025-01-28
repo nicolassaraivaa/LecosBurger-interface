@@ -1,4 +1,4 @@
-import { Link as ReactLink} from "react-router-dom";
+import { Link as ReactLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -7,12 +7,17 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     background-color: ${props => props.theme.secondBlack};
-    height: 110vh;
+    height: 100vh;
     width: 100vw;
 
-    @media (max-width: 420px) {
-        height: 100%;
+    @media (max-width: 1300px) {
+        height: 100%
     }
+
+    @media (min-height: 840px) {
+        height: 100vh;
+    }
+
 
 `
 
@@ -46,13 +51,24 @@ export const Form = styled.form`
     flex-direction: column;
     gap: 1.6rem;
 `
-export const InputGroup = styled.div`
 
+export const InputGroup = styled.div`
+    p{
+        margin-top: 0.36rem;
+        font-size: 0.7rem;
+        color: ${props => props.theme.red};
+    }
 `
 
 export const InputName = styled.div`
     display: flex;
     gap: 0.8rem;
+
+    p{
+        margin-top: 0.36rem;
+        font-size: 0.7rem;
+        color: ${props => props.theme.red};
+    }
 `
 
 export const Input = styled.input` 

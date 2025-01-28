@@ -21,8 +21,14 @@ import * as yup from "yup"
 
 const schema = yup
   .object({
-    firstName: yup.string().required(),
-    age: yup.number().positive().integer().required(),
+    email: yup
+        .string()   
+        .email('Digite um e-mail válido')
+        .required('O e-mail é obrigatório'),
+    password: yup
+        .string()  
+        .min(6, 'A senha deve ter pelo menos 6 caracteres') 
+        .required('Digite uma senha'),
   })
   .required()
 
@@ -49,15 +55,27 @@ export function Login() {
                         <IconEmail>
                             <EnvelopeSimple fill="#858585" size={20} />
                         </IconEmail>
-                        <Input type="email" placeholder="E-mail" />
+                        <Input 
+                            type="email" 
+                            placeholder="E-mail" 
+                            {...register("email")} 
+                        />
                     </InputGroup>
+                    <p>{errors.email?.message}</p>
+
 
                     <InputGroup>
                         <IconLock>
                             <LockSimple   size={20} fill="#858585"/>
                         </IconLock>
-                        <Input type="password" placeholder="Senha" />
+                        <Input 
+                            type="password" 
+                            placeholder="Senha" 
+                            {...register("password")}
+                        />
                     </InputGroup>
+                    <p>{errors.password?.message}</p>
+
                     <Button>Entrar</Button>
                 </Form>
 

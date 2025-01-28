@@ -3,6 +3,7 @@ export const standardThemes = {
     secondBlack: '#171717',
     yellow: '#FFBA00',
     white: '#FFFFFF',
-    darkGray: '#858585'
+    darkGray: '#858585',
+    red: '#DC143C'
 
 }
