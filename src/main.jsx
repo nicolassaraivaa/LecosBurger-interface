@@ -6,6 +6,7 @@ import { Router } from './routes'
 import GlobalStyles from './styles/globalStyles'
 import { ThemeProvider } from 'styled-components'
 import { standardThemes } from './styles/themes/standard'
+import { ToastContainer } from 'react-toastify'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
         <Router/>
       </BrowserRouter>
       <GlobalStyles/>
+      <ToastContainer autoClose={2000} theme='colored'/>
     </ThemeProvider>
   </StrictMode>
 )
