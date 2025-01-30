@@ -21,6 +21,7 @@ import InputMask from 'react-input-mask'; // Importando a biblioteca para másca
 import axios from "axios";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { useLocation } from "react-router-dom";
 
 const schema = yup
     .object({
@@ -52,6 +53,8 @@ const schema = yup
 export function RegisterCep() {
     const [loadingCep, setLoadingCep] = useState(false)
 
+    const {state : {dataUser}} = useLocation()
+
     const {
         register,
         handleSubmit,
@@ -61,7 +64,7 @@ export function RegisterCep() {
         resolver: yupResolver(schema),
     })
 
-    const onSubmit = (data) => console.log(data)
+    const onSubmit = (data) => console.log(data, dataUser)
 
     const handleCepSerch = async () => {
         const cepValue = document.getElementById('cep').value.replace(/\D/g, '')

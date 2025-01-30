@@ -3,15 +3,17 @@ import { Route, Routes } from "react-router-dom";
 import {
     Login,
     Register,
-    RegisterCep
+    RegisterCep,
+    Home
 } from '../container'
 
 export function Router() {
     return (
         <Routes>
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/cadastro' element={<Register/>}/>
-            <Route path='/cadastrocep' element={<RegisterCep/>}/>
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/cadastro' element={<Register />} />
+            <Route path='/cadastrocep' element={<RegisterCep />} />
         </Routes>
     )
 }
