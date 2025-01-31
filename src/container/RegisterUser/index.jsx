@@ -24,7 +24,7 @@ const schema = yup
         name: yup
             .string()
             .max(15, 'Deve ter no máximo 15 caractere')
-            .required('O nome é obrigatório'),
+            .required('Campo obrigatório'),
         surname: yup
             .string()
             .max(15, 'Deve ter no máximo 15 caractere')
@@ -34,7 +34,7 @@ const schema = yup
             .required('Digite seu CPF'),
         phone: yup
             .string()
-            .required('Digite uma senha'),
+            .required('Campo obrigatório'),
         email: yup
             .string()
             .email('Digite um e-mail válido')
